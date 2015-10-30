@@ -301,6 +301,7 @@
       <message-type abbrev="PopUp"/>
       <message-type abbrev="Teleoperation"/>
       <message-type abbrev="Launch"/>
+      <message-type abbrev="Drop"/>
       <message-type abbrev="Loiter"/>
       <message-type abbrev="IdleManeuver"/>
       <message-type abbrev="LowLevelControl"/>
@@ -6092,6 +6093,95 @@
       <description>
         Speed units.
       </description>
+    </field>
+    <field name="Custom settings for maneuver" abbrev="custom" unit="TupleList" type="plaintext">
+      <description>
+        Custom settings for maneuver.
+      </description>
+    </field>
+  </message>
+
+  <message id="486" name="Drop Maneuver" abbrev="Drop" source="ccu">
+    <description>
+      The Drop maneuver makes the vehicle circle around a specific
+      waypoint with fixed depth reference and then drop a payload.
+    </description>
+    <field name="Timeout" abbrev="timeout" type="uint16_t" unit="s">
+      <description>
+        The timeout indicates the time that an error should occur if
+        exceeded.
+      </description>
+    </field>
+    <field name="Latitude WGS-84" abbrev="lat" type="fp64_t" unit="rad" min="-1.5707963267948966" max="1.5707963267948966">
+      <description>
+        WGS-84 Latitude coordinate.
+      </description>
+    </field>
+    <field name="Longitude WGS-84" abbrev="lon" type="fp64_t" unit="rad" min="-3.141592653589793" max="3.141592653589793">
+      <description>
+        WGS-84 Longitude coordinate.
+      </description>
+    </field>
+    <field name="Z Reference" abbrev="z" type="fp32_t" unit="m">
+      <description>
+        Maneuver reference in the z axis. Use z_units to specify
+        whether z represents depth, altitude or other.
+      </description>
+    </field>
+    <field name="Z Units" abbrev="z_units" type="uint8_t" value="0" unit="Enumerated" enum-def="ZUnits">
+      <description>
+        Units of the z reference.
+      </description>
+    </field>
+    <field name="Duration" abbrev="duration" type="uint16_t" unit="s">
+      <description>
+        The duration of this maneuver. Use '0' for unlimited duration
+        time.
+      </description>
+    </field>
+    <field name="Speed" abbrev="speed" type="fp32_t">
+      <description>
+        Maneuver speed reference.
+      </description>
+    </field>
+    <field name="Speed Units" abbrev="speed_units" type="uint8_t" value="0" unit="Enumerated" enum-def="SpeedUnits">
+      <description>
+        Speed units.
+      </description>
+    </field>
+    <field name="Loiter Type" abbrev="type" type="uint8_t" unit="Enumerated" prefix="LT" min="0" max="4">
+      <description>
+        Loiter maneuver type.
+      </description>
+      <value id="0" name="Default" abbrev="DEFAULT"/>
+      <value id="1" name="Circular" abbrev="CIRCULAR"/>
+      <value id="2" name="Race track" abbrev="RACETRACK"/>
+      <value id="3" name="Figure 8" abbrev="EIGHT"/>
+      <value id="4" name="Hover" abbrev="HOVER"/>
+    </field>
+    <field name="Radius" abbrev="radius" type="fp32_t" unit="m" min="1" max="100000">
+      <description>
+        Radius of the maneuver.
+      </description>
+    </field>
+    <field name="Length" abbrev="length" type="fp32_t" unit="m" min="1" max="100000">
+      <description>
+        Length of the maneuver.
+      </description>
+    </field>
+    <field name="Bearing" abbrev="bearing" type="fp64_t" unit="rad" min="0" max="6.283185307179586">
+      <description>
+        Bearing of the maneuver.
+      </description>
+    </field>
+    <field name="Direction" abbrev="direction" type="uint8_t" unit="Enumerated" prefix="LD" min="0" max="3">
+      <description>
+        Desired direction.
+      </description>
+      <value id="0" name="Vehicle Dependent" abbrev="VDEP"/>
+      <value id="1" name="Clockwise" abbrev="CLOCKW"/>
+      <value id="2" name="Counter Clockwise" abbrev="CCLOCKW"/>
+      <value id="3" name="Into the wind/current" abbrev="IWINDCURR"/>
     </field>
     <field name="Custom settings for maneuver" abbrev="custom" unit="TupleList" type="plaintext">
       <description>
