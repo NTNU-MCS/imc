@@ -26,6 +26,8 @@
   <address id="0x001E" name="lauv-xplore-1"/>
   <address id="0x001F" name="lauv-xplore-2"/>
   <address id="0x00D1" name="lauv-simulator-1"/>
+  <!-- AUVs (NTNU) -->
+  <address id="0x0201" name="ntnu-remus"/>
   <!-- ROVs (LSTS) -->
   <address id="0x0401" name="rov-ies"/>
   <address id="0x0402" name="adamastor"/>

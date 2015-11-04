@@ -8159,5 +8159,154 @@
   </message>
 
   <!-- END   NECSAVE Messages -->
+  
+  <!-- BEGIN NTNU-REMUS Messages -->
+  
+  <message id="1900" name="Highpass Control Parcel" abbrev="HighpassControlParcel">
+    <description>
+      Debug Information for the highpass controller for REMUS.
+    </description>
+    <field name="Highpass Value" abbrev="highpass" type="fp32_t"/>
+    <field name="Altitude rate of change" abbrev="adot" type="fp32_t"/>
+    <field name="Slope Compensation" abbrev="slope_compensation" type="fp32_t"/>
+    <field name="Slope Compensation Difference" abbrev="slope_compensation_difference" type="fp32_t"/>
+    <field name="Altitude" abbrev="altitude" type="fp32_t"/>
+    <field name="Auto Altitude" abbrev="auto_altitude" type="fp32_t"/>
+  </message>
+
+  <message id="1901" name="Recon Status" abbrev="ReconStatus">
+    <description>
+      Recon Status message
+    </description>
+    <field name="Remote Control Allowed" abbrev="remote_control_allowed" type="uint8_t" />
+    <field name="Remote Control Enabled" abbrev="remote_control_enabled" type="uint8_t" />
+    <field name="Remote Control Active" abbrev="remote_control_active" type="uint8_t" />
+    <field name="Depth Only Control Enabled" abbrev="depth_only_control_enabled" type="uint8_t" />
+    <field name="Direct Control Enabled" abbrev="direct_control_enabled" type="uint8_t" />
+    <field name="Return To Closest Point On Line" abbrev="return_to_closest_point_on_line" type="uint8_t" />
+    <field name="On Shore Power" abbrev="on_shore_power" type="uint8_t" />
+    <field name="Latitude" abbrev="latitude" type="fp64_t" />
+    <field name="Longitude" abbrev="longitude" type="fp64_t" />
+    <field name="Depth" abbrev="depth" type="fp64_t" />
+    <field name="Depth Reference" abbrev="depth_ref" type="fp64_t" />
+    <field name="Altitude" abbrev="altitude" type="fp64_t" />
+    <field name="Altitude Reference" abbrev="altitude_ref" type="fp64_t" />
+    <field name="Pitch" abbrev="pitch" type="fp64_t" />
+    <field name="Roll" abbrev="roll" type="fp64_t" />
+    <field name="Rpm" abbrev="rpm" type="fp64_t" />
+    <field name="Rpm Reference" abbrev="rpm_ref" type="fp64_t" />
+    <field name="Speed" abbrev="speed" type="fp64_t" />
+    <field name="Speed Reference" abbrev="speed_ref" type="fp64_t" />
+    <field name="Heading" abbrev="heading" type="fp64_t" />
+    <field name="Heading Rate" abbrev="heading_rate" type="fp64_t" />
+    <field name="Heading Reference" abbrev="heading_ref" type="fp64_t" />
+    <field name="Mission State" abbrev="mission_state" type="uint8_t" />
+    <field name="Leg" abbrev="leg" type="int64_t" />
+  </message>
+
+  <message id="1902" name="Recon Command" abbrev="ReconCommand">
+    <description>
+      Message describing a command sent to Recon.
+      It is intended to be logged each time a command is sent to RECON.
+    </description>
+    <field name="Command Name" abbrev="name" type="plaintext" />
+    <field name="Command Argument 1" abbrev="arg1" type="fp64_t" />
+    <field name="Command Argument 2" abbrev="arg2" type="fp64_t" />
+    <field name="Command Argument 3" abbrev="arg3" type="fp64_t" />
+    <field name="Command Argument 4" abbrev="arg4" type="fp64_t" />
+  </message>
+
+  <message id="1903" name="DVL Ranges" abbrev="DvlRanges">
+    <description>
+      DVL Ranges
+    </description>
+    <field name="Direction" abbrev="direction" type="uint8_t" unit="Enumerated" prefix="DR">
+      <value id="0x00" name="Up" abbrev="up" />
+      <value id="0x01" name="Down" abbrev="down" />
+    </field>
+    <field name="Range 1" abbrev="range1" type="fp32_t" />
+    <field name="Range 2" abbrev="range2" type="fp32_t" />
+    <field name="Range 3" abbrev="range3" type="fp32_t" />
+    <field name="Range 4" abbrev="range4" type="fp32_t" />
+  </message>
+
+  <message id="1904" name="Recon Message" abbrev="ReconMessage">
+    <description>
+      Message describing a command sent over RECON.
+    </description>
+    <field name="Message" abbrev="msg" type="plaintext" />
+    <field name="Direction" abbrev="direction" type="uint8_t" unit="Enumerated" prefix="RC">
+      <description>
+        Command direction.
+      </description>
+      <value id="0x00" name="Vehicle To External" abbrev="VEHICLE_TO_EXTERNAL">
+        <description>
+          Vehicle to external
+        </description>
+      </value>
+      <value id="0x01" name="External To Vehicle" abbrev="EXTERNAL_TO_VEHICLE">
+        <description>
+          External to vehicle
+        </description>
+      </value>
+    </field>
+  </message>
+
+  <message id="1905" name="Recon Control State" abbrev="ReconControlState">
+    <description>
+      Recon Control State. Indicating if RECON is able to receive messages.
+    </description>
+    <field name="State" abbrev="state" type="uint8_t" unit="Enumerated" prefix="RCS">
+      <value id="0" name="Enabled" abbrev="ENABLED" />
+      <value id="1" name="Disabled" abbrev="DISABLED" />
+    </field>
+  </message>
+
+  <message id="1910" name="Adot Debud" abbrev="AdotDebug">
+    <description>
+      Adot Debug
+    </description>
+    <field name="dt" abbrev="dt" type="fp64_t" />
+    <field name="k_d" abbrev="k_d" type="fp64_t" />
+    <field name="range1" abbrev="range1" type="fp64_t" />
+    <field name="range2" abbrev="range2" type="fp64_t" />
+    <field name="range3" abbrev="range3" type="fp64_t" />
+    <field name="range4" abbrev="range4" type="fp64_t" />
+    <field name="u" abbrev="u" type="fp64_t" />
+    <field name="v" abbrev="v" type="fp64_t" />
+    <field name="w" abbrev="w" type="fp64_t" />
+    <field name="phi" abbrev="phi" type="fp64_t" />
+    <field name="theta" abbrev="theta" type="fp64_t" />
+    <field name="psi" abbrev="psi" type="fp64_t" />
+    <field name="adot" abbrev="adot" type="fp64_t" />
+  </message>
+
+  <message id="1920" name="Simulated Time" abbrev="SimulatedTime">
+    <description>
+      The current simulation time used by AUVSim.
+      Used to get the timestamp for integration.
+    </description>
+    <field name="Timestamp" abbrev="htime" type="fp64_t" unit="s"/>
+    <field name="Timestep" abbrev="dt" type="fp32_t" unit="s" />
+  </message>
+
+  <message id="1930" abbrev="ReconDesiredHeadingAngle" name="Recon Desired Heading Angle">
+    <field name="value" abbrev="value" type="fp64_t" unit="rad" />
+  </message>
+
+  <message id="1931" abbrev="ReconDesiredHeadingWaypoint" name="Recon Desired Heading Waypoint">
+    <field name="lat" abbrev="lat" type="fp64_t" unit="rad" />
+    <field name="lon" abbrev="lon" type="fp64_t" unit="rad" />
+  </message>
+
+  <message id="1932" abbrev="ReconDesiredSpeed" name="Recon Desired Speed">
+    <field name="value" abbrev="value" type="fp64_t" unit="m/s" />
+  </message>
+
+  <message id="1933" abbrev="ReconDesiredZ" name="Recon Desired Z">
+    <field name="value" abbrev="value" type="fp64_t" unit="m/s" />
+  </message>
+
+  <!-- BEGIN NTNU-REMUS Messages -->
 
 </messages>
