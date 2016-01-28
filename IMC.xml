@@ -2406,6 +2406,7 @@
       <value id="0" name="Sidescan" abbrev="SIDESCAN"/>
       <value id="1" name="Echo Sounder" abbrev="ECHOSOUNDER"/>
       <value id="2" name="Multibeam" abbrev="MULTIBEAM"/>
+	  <value id="3" name="Dvl" abbrev="DVL"/>
     </field>
     <field name="Frequency" abbrev="frequency" type="uint32_t" unit="Hz">
       <description>
@@ -8160,9 +8161,9 @@
 
   <!-- END   NECSAVE Messages -->
   
-  <!-- BEGIN NTNU-REMUS Messages -->
+  <!-- BEGIN NTNU AURLAB Messages -->
   
-  <message id="1900" name="Highpass Control Parcel" abbrev="HighpassControlParcel">
+  <message id="6001" name="Highpass Control Parcel" abbrev="HighpassControlParcel">
     <description>
       Debug Information for the highpass controller for REMUS.
     </description>
@@ -8174,7 +8175,7 @@
     <field name="Auto Altitude" abbrev="auto_altitude" type="fp32_t"/>
   </message>
 
-  <message id="1901" name="Recon Status" abbrev="ReconStatus">
+  <message id="6002" name="Recon Status" abbrev="ReconStatus">
     <description>
       Recon Status message
     </description>
@@ -8204,7 +8205,7 @@
     <field name="Leg" abbrev="leg" type="int64_t" />
   </message>
 
-  <message id="1902" name="Recon Command" abbrev="ReconCommand">
+  <message id="6003" name="Recon Command" abbrev="ReconCommand">
     <description>
       Message describing a command sent to Recon.
       It is intended to be logged each time a command is sent to RECON.
@@ -8216,7 +8217,7 @@
     <field name="Command Argument 4" abbrev="arg4" type="fp64_t" />
   </message>
 
-  <message id="1903" name="DVL Ranges" abbrev="DvlRanges">
+  <message id="6004" name="DVL Ranges" abbrev="DvlRanges">
     <description>
       DVL Ranges
     </description>
@@ -8230,7 +8231,7 @@
     <field name="Range 4" abbrev="range4" type="fp32_t" />
   </message>
 
-  <message id="1904" name="Recon Message" abbrev="ReconMessage">
+  <message id="6005" name="Recon Message" abbrev="ReconMessage">
     <description>
       Message describing a command sent over RECON.
     </description>
@@ -8252,7 +8253,7 @@
     </field>
   </message>
 
-  <message id="1905" name="Recon Control State" abbrev="ReconControlState">
+  <message id="6006" name="Recon Control State" abbrev="ReconControlState">
     <description>
       Recon Control State. Indicating if RECON is able to receive messages.
     </description>
@@ -8262,7 +8263,7 @@
     </field>
   </message>
 
-  <message id="1910" name="Adot Debud" abbrev="AdotDebug">
+  <message id="6007" name="Adot Debud" abbrev="AdotDebug">
     <description>
       Adot Debug
     </description>
@@ -8281,7 +8282,7 @@
     <field name="adot" abbrev="adot" type="fp64_t" />
   </message>
 
-  <message id="1920" name="Simulated Time" abbrev="SimulatedTime">
+  <message id="6008" name="Simulated Time" abbrev="SimulatedTime">
     <description>
       The current simulation time used by AUVSim.
       Used to get the timestamp for integration.
@@ -8290,23 +8291,68 @@
     <field name="Timestep" abbrev="dt" type="fp32_t" unit="s" />
   </message>
 
-  <message id="1930" abbrev="ReconDesiredHeadingAngle" name="Recon Desired Heading Angle">
+  <message id="6009" abbrev="ReconDesiredHeadingAngle" name="Recon Desired Heading Angle">
     <field name="value" abbrev="value" type="fp64_t" unit="rad" />
   </message>
 
-  <message id="1931" abbrev="ReconDesiredHeadingWaypoint" name="Recon Desired Heading Waypoint">
+  <message id="6010" abbrev="ReconDesiredHeadingWaypoint" name="Recon Desired Heading Waypoint">
     <field name="lat" abbrev="lat" type="fp64_t" unit="rad" />
     <field name="lon" abbrev="lon" type="fp64_t" unit="rad" />
   </message>
 
-  <message id="1932" abbrev="ReconDesiredSpeed" name="Recon Desired Speed">
+  <message id="6011" abbrev="ReconDesiredSpeed" name="Recon Desired Speed">
     <field name="value" abbrev="value" type="fp64_t" unit="m/s" />
   </message>
 
-  <message id="1933" abbrev="ReconDesiredZ" name="Recon Desired Z">
+  <message id="6012" abbrev="ReconDesiredZ" name="Recon Desired Z">
     <field name="value" abbrev="value" type="fp64_t" unit="m/s" />
   </message>
+  
+  <message id="6013" name="Dynamic environment" abbrev="SimulatedDynamicEnvironment">
+    <description>
+      Position and heading of a simulated dynamic environment
+    </description>
+    <field name="Dynamic Environment Type" abbrev="EnvironmentTypeId" type="uint8_t">
+      <description>
+        Type identifier of environment.
+      </description>
+    </field>
+	<field name="Identifier" abbrev="Id" type="uint8_t">
+      <description>
+        Numeric identifier.
+      </description>
+    </field>
+    <field name="North position" abbrev="x" type="fp32_t" unit="m">
+      <description>
+        The North position offset of the NED field with respect to origin.
+      </description>
+    </field>
+    <field name="East position" abbrev="y" type="fp32_t" unit="m">
+      <description>
+        The East position offset of the NED field with respect to origin.
+      </description>
+    </field>
+	<field name="Heading" abbrev="psi" type="fp64_t" unit="rad">
+      <description>
+        The orientation of the environment.
+      </description>
+    </field>
+	<field name="Surge velocity" abbrev="u" type="fp32_t" unit="m/s">
+      <description>
+        The body surge velocity of the environment.
+      </description>
+    </field>
+    <field name="Sway velocity" abbrev="v" type="fp32_t" unit="m/s">
+      <description>
+        The body sway velocity of the environment.
+      </description>
+    </field>
+	<field name="Heading rate" abbrev="r" type="fp64_t" unit="rad/s">
+      <description>
+        The orientation rate of the environment.
+      </description>
+    </field>
+  </message>
 
-  <!-- BEGIN NTNU-REMUS Messages -->
-
+	<!-- END NTNU AURLAB Messages -->
 </messages>
