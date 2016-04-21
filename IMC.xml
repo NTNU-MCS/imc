@@ -8324,12 +8324,12 @@
     </field>
     <field name="North position" abbrev="x" type="fp32_t" unit="m">
       <description>
-        The North position offset of the NED field with respect to origin.
+        The North position of environment origin..
       </description>
     </field>
     <field name="East position" abbrev="y" type="fp32_t" unit="m">
       <description>
-        The East position offset of the NED field with respect to origin.
+        The East position of environment origin..
       </description>
     </field>
 	<field name="Heading" abbrev="psi" type="fp64_t" unit="rad">
@@ -8350,6 +8350,66 @@
 	<field name="Heading rate" abbrev="r" type="fp64_t" unit="rad/s">
       <description>
         The orientation rate of the environment.
+      </description>
+    </field>
+	<field name="AUV North position" abbrev="x_auv" type="fp32_t" unit="m">
+      <description>
+        The North position of AUV.
+      </description>
+    </field>
+    <field name="AUV East position" abbrev="y_auv" type="fp32_t" unit="m">
+      <description>
+        The East position of AUV.
+      </description>
+    </field>
+	<field name="AUV Down position" abbrev="z_auv" type="fp32_t" unit="m">
+      <description>
+        The East position of AUV.
+      </description>
+    </field>
+	<field name="AUV Roll" abbrev="phi_auv" type="fp64_t" unit="rad">
+      <description>
+        The orientation of the AUV.
+      </description>
+    </field>
+	<field name="AUV Pitch" abbrev="theta_auv" type="fp64_t" unit="rad">
+      <description>
+        The orientation of the AUV.
+      </description>
+    </field>
+	<field name="AUV Heading" abbrev="psi_auv" type="fp64_t" unit="rad">
+      <description>
+        The orientation of the AUV.
+      </description>
+    </field>
+	<field name="AUV Surge velocity" abbrev="u_auv" type="fp32_t" unit="m/s">
+      <description>
+        The body surge velocity of the AUV.
+      </description>
+    </field>
+    <field name="AUV Sway velocity" abbrev="v_auv" type="fp32_t" unit="m/s">
+      <description>
+        The body sway velocity of the AUV.
+      </description>
+    </field>
+	<field name="AUV Heave velocity" abbrev="w_auv" type="fp32_t" unit="m/s">
+      <description>
+        The body heave velocity of the AUV.
+      </description>
+    </field>
+	<field name="AUV Roll rate" abbrev="p_auv" type="fp64_t" unit="rad/s">
+      <description>
+        The roll rate of the AUV.
+      </description>
+    </field>
+	<field name="AUV Pitch rate" abbrev="q_auv" type="fp64_t" unit="rad/s">
+      <description>
+        The pitch rate of the AUV.
+      </description>
+    </field>
+	<field name="AUV Heading rate" abbrev="r_auv" type="fp64_t" unit="rad/s">
+      <description>
+        The orientation rate of the AUV.
       </description>
     </field>
   </message>
