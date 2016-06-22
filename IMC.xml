@@ -9312,9 +9312,8 @@
       </description>
     </field>
   </message>
-</messages>
-
-<!-- BEGIN NTNU AURLAB Messages -->
+  
+  <!-- BEGIN NTNU AURLAB Messages 6001 - 6100 -->
   
   <message id="6001" name="Highpass Control Parcel" abbrev="HighpassControlParcel">
     <description>
@@ -9563,66 +9562,10 @@
 	<field name="AUV Heading rate" abbrev="r_auv" type="fp64_t" unit="rad/s">
       <description>
         The orientation rate of the AUV.
-  <message id="899" name="USBL Position Extended" abbrev="UsblPositionExtended">
-    <description>
-      This message contains information, collected using USBL, about a
-      target's position.
-    </description>
-    <field name="Target" abbrev="target" type="plaintext">
-      <description>
-        Target's system name.
-      </description>
-    </field>
-    <field name="X" abbrev="x" type="fp32_t" unit="m">
-      <description>
-        X coordinate of the target in the local device's reference frame.
-      </description>
-    </field>
-    <field name="Y" abbrev="y" type="fp32_t" unit="m">
-      <description>
-        Y coordinate of the target in the local device's reference frame.
-      </description>
-    </field>
-    <field name="Z" abbrev="z" type="fp32_t" unit="m">
-      <description>
-        Z coordinate of the target in the local device's reference frame.
-      </description>
-    </field>
-    <field name="N" abbrev="n" type="fp32_t" unit="m">
-      <description>
-        X coordinate of the target in the navigation reference frame.
-      </description>
-    </field>
-    <field name="E" abbrev="e" type="fp32_t" unit="m">
-      <description>
-        Y coordinate of the target in the navigation reference frame.
-      </description>
-    </field>
-    <field name="D" abbrev="d" type="fp32_t" unit="m">
-      <description>
-        Z coordinate of the target in the navigation reference frame.
-      </description>
-    </field>
-    <field name="Roll Angle" abbrev="phi" type="fp32_t" unit="rad" min="-3.141592653589793" max="3.141592653589793">
-      <description>
-        Rotation around the device longitudinal axis.
-      </description>
-    </field>
-    <field name="Pitch Angle" abbrev="theta" type="fp32_t" unit="rad" min="-1.57079632679490" max="1.57079632679490">
-      <description>
-        Rotation around the device lateral or transverse axis.
-      </description>
-    </field>
-    <field name="Yaw Angle" abbrev="psi" type="fp32_t" unit="rad" min="-3.141592653589793" max="3.141592653589793">
-      <description>
-        Rotation around the device vertical axis.
-      </description>
-    </field>
-    <field name="Accuracy" abbrev="accuracy" type="fp32_t" unit="m" min="0">
-      <description>
-        Accuracy of the position fix.
-      </description>
-    </field>
+	  </description>
+	</field>
   </message>
   
 	<!-- END NTNU AURLAB Messages -->
+  
+</messages>
