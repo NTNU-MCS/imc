@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Copyright (C) 2007-2013 Laboratório de Sistemas e Tecnologia Subaquática   +
++ Copyright (C) 2007-2016 Laboratório de Sistemas e Tecnologia Subaquática   +
 + Departamento de Engenharia Electrotécnica e de Computadores                +
 + Rua Dr. Roberto Frias, 4200-465 Porto, Portugal                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -33,11 +33,13 @@
   <address id="0x0402" name="adamastor"/>
   <!-- ASVs (LSTS) -->
   <address id="0x0801" name="swordfish"/>
+  <address id="0x0802" name="caravela"/>
   <address id="0x08c1" name="hermes"/>
   <address id="0x08c2" name="hermes-desired"/>
   <address id="0x08c3" name="hermes-target"/>
   <address id="0x08c4" name="tex-wg"/>
   <!-- UAVs (LSTS) -->
+  <address id="0x0c00" name="pixhawk-testbed"/>
   <address id="0x0c01" name="lusitania"/>
   <address id="0x0c02" name="sedona"/>
   <address id="0x0c03" name="x8-00"/>
@@ -48,6 +50,8 @@
   <address id="0x0c08" name="aero-01"/>
   <address id="0x0c09" name="mariner-01"/>
   <address id="0x0c10" name="mariner-02"/>
+  <address id="0x0c1a" name="x8-05"/>
+  <address id="0x0c1b" name="x8-06"/>
   <address id="0x0c13" name="hexa-00"/>
   <address id="0x0c22" name="alfa-02"/>
   <address id="0x0c23" name="alfa-03"/>
@@ -118,14 +122,15 @@
   <address id="0x8014" name="manta-3"/>
   <address id="0x8015" name="manta-4"/>
   <address id="0x8016" name="manta-5"/>
-  <address id="0x801a" name="manta-9"/>
+  <address id="0x801a" name="manta-dmsmw-01"/>
   <address id="0x801c" name="manta-11"/>
   <address id="0x801d" name="manta-12"/>
   <address id="0x8020" name="manta-15"/>
   <address id="0x8021" name="manta-16"/>
   <address id="0x8026" name="manta-21"/>
-  <address id="0x8027" name="manta-22"/>
-  <address id="0x8028" name="manta-23"/>
+  <address id="0x8027" name="manta-dmsmw-02"/>
+  <address id="0x8028" name="manta-dmsmw-03"/>
+  <address id="0x8029" name="manta-rugged"/>
   <address id="0x8040" name="piccolo-gs1"/>
   <address id="0x8041" name="piccolo-gs2"/>
   <address id="0x8042" name="piccolo-gs3"/>
