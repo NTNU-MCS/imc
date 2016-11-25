@@ -26,7 +26,7 @@
   <address id="0x001E" name="lauv-xplore-1"/>
   <address id="0x001F" name="lauv-xplore-2"/>
   <address id="0x00D1" name="lauv-simulator-1"/>
-   <!-- NTNU AURlab Systems (LAUVs) -->
+  <!-- LAUVs (AURlab NTNU) -->
   <address id="0x020d" name="lauv-harald"/>
   <address id="0x020e" name="lauv-fridjof"/>
   <!-- ROVs (LSTS) -->
@@ -176,9 +176,11 @@
   <address id="0x8500" name="wavy-0"/>
   <address id="0x8501" name="wavy-1"/>
   <address id="0x8502" name="wavy-2"/>
-   <!-- NTNU AURlab Systems (AUVs and other systems) -->
-  <address id="0x8901" name="asv-jetyak"/>
-  <address id="0x8902" name="remus-mjolner"/>
+  <!-- NTNU AURlab Systems (AUVs, ASVs) -->
+  <address id="0x8801" name="asv-jetyak"/>
+  <address id="0x8802" name="remus-mjolner"/>
+  <!-- NTNU AURlab Systems (Self containing sensor systems) -->
+  <address id="0x8901" name="manta-jetyak"/>
   <!-- Other Sensors (Self containing sensor systems) -->
   <address id="0x9001" name="ntnu-nest-01"/>
   <address id="0x9002" name="ntnu-nest-02"/>
