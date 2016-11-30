@@ -28,7 +28,7 @@
   <address id="0x00D1" name="lauv-simulator-1"/>
   <!-- LAUVs (NTNU AURlab) -->
   <address id="0x020d" name="lauv-harald"/>
-  <address id="0x020e" name="lauv-fridjof"/>
+  <address id="0x020e" name="lauv-fridtjof"/>
   <!-- ROVs (LSTS) -->
   <address id="0x0401" name="rov-ies"/>
   <address id="0x0402" name="adamastor"/>
