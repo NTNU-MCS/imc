@@ -26,10 +26,9 @@
   <address id="0x001E" name="lauv-xplore-1"/>
   <address id="0x001F" name="lauv-xplore-2"/>
   <address id="0x00D1" name="lauv-simulator-1"/>
-  <!-- AUVs (NTNU) -->
-  <address id="0x0201" name="ntnu-remus"/>
-  <address id="0x0202" name="ntnu-fridjof"/>
-  <address id="0x0203" name="ntnu-harald"/>
+  <!-- LAUVs (NTNU AURlab) -->
+  <address id="0x020d" name="lauv-harald"/>
+  <address id="0x020e" name="lauv-fridtjof"/>
   <!-- ROVs (LSTS) -->
   <address id="0x0401" name="rov-ies"/>
   <address id="0x0402" name="adamastor"/>
@@ -139,8 +138,9 @@
   <address id="0x8040" name="piccolo-gs1"/>
   <address id="0x8041" name="piccolo-gs2"/>
   <address id="0x8042" name="piccolo-gs3"/>
-  <address id="0x8070" name="ais-1"/>
-  <address id="0x8071" name="ais-2"/>
+  <address id="0x8070" name="manta-ntnu-1"/>
+  <address id="0x8071" name="ais-1"/>
+  <address id="0x8072" name="ais-2"/>
   <address id="0x8401" name="spot-01"/>
   <address id="0x8402" name="spot-02"/>
   <address id="0x8403" name="spot-03"/>
@@ -176,9 +176,16 @@
   <address id="0x8500" name="wavy-0"/>
   <address id="0x8501" name="wavy-1"/>
   <address id="0x8502" name="wavy-2"/>
+  <!-- NTNU AURlab (AUVs, ASVs) -->
+  <address id="0x8801" name="asv-jetyak"/>
+  <address id="0x8802" name="remus-mjolner"/>
+  <!-- NTNU AURlab (Self containing sensor systems) -->
+  <address id="0x8901" name="manta-jetyak"/>
   <!-- Other Sensors (Self containing sensor systems) -->
   <address id="0x9001" name="ntnu-nest-01"/>
   <address id="0x9002" name="ntnu-nest-02"/>
+  <!-- NTNU AURlab (Virtual systems) -->
+  <address id="0xAA01" name="lauv-virtual-1"/>
   <!-- Special IDs -->
   <address id="0xFFF0" name="broadcast"/>
   <address id="0xFFFF" name="null"/>
